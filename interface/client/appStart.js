@@ -47,8 +47,8 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.ethersocial.org',
-                    redirect: 'https://wallet.ethersocial.org',
+                    url: 'https://wallet.baboqoo.org',
+                    redirect: 'https://wallet.baboqoo.org',
                     position: 1,
                     permissions: {
                         admin: true

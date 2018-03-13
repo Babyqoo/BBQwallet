@@ -19,10 +19,10 @@ sacha:spin
 chuangbo:cookie
 agnito:simptip
 mrt:jquery-ui-sortable
-baboqoo:web3
-baboqoo:elements
-baboqoo:accounts
-baboqoo:blocks
+babyqoo:web3
+babyqoo:elements
+babyqoo:accounts
+babyqoo:blocks
 ethereum:dapp-styles
 meteor-base@1.0.4
 mobile-experience@1.0.4
