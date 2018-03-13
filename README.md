@@ -143,9 +143,9 @@ $ yarn dev:electron --rpc http://localhost:8545
 ```
 
 
-### Passing options to Gbbq
+### Passing options to Geth
 
-You can pass command-line options directly to Gbbq by prefixing them with `--node-` in
+You can pass command-line options directly to Geth by prefixing them with `--node-` in
 the command-line invocation:
 
 ```bash

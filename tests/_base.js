@@ -54,9 +54,9 @@ const startGeth = function* () {
         },
     });
 
-    console.info('Gbbq starting...');
+    console.info('Geth starting...');
     yield geth.start();
-    console.info('Gbbq started');
+    console.info('Geth started');
 
     return geth;
 };
