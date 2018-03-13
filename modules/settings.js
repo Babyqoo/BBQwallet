@@ -156,13 +156,13 @@ class Settings {
         ipcPath = this.userHomePath;
 
         if (process.platform === 'darwin') {
-            ipcPath += '/Library/BaboQoo/gbbq.ipc';
+            ipcPath += '/Library/BaboQoo/geth.ipc';
         } else if (process.platform === 'freebsd' ||
             process.platform === 'linux' ||
             process.platform === 'sunos') {
-            ipcPath += '/.baboqoo/gbbq.ipc';
+            ipcPath += '/.baboqoo/geth.ipc';
         } else if (process.platform === 'win32') {
-            ipcPath = '\\\\.\\pipe\\gbbq.ipc';
+            ipcPath = '\\\\.\\pipe\\geth.ipc';
         }
 
         settingsLog.debug(`IPC path: ${ipcPath}`);

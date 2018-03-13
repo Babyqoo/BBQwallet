@@ -137,7 +137,7 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                     } else {
                         keystorePath += '/.web3/keys';
                     }
-                // gbbq
+                // geth
                 } else {
                     if (process.platform === 'darwin') keystorePath += '/Library/BaboQoo/keystore';
 

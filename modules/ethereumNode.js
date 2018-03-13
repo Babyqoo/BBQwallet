@@ -14,7 +14,7 @@ const ClientBinaryManager = require('./clientBinaryManager');
 import logger from './utils/logger';
 const ethereumNodeLog = logger.create('EthereumNode');
 
-const DEFAULT_NODE_TYPE = 'gbbq';
+const DEFAULT_NODE_TYPE = 'geth';
 const DEFAULT_NETWORK = 'main';
 const DEFAULT_SYNCMODE = 'light';
 
@@ -84,7 +84,7 @@ class EthereumNode extends EventEmitter {
     }
     
     get isGbbq() {
-        return this._type === 'gbbq';
+        return this._type === 'geth';
     }
 
     get isMainNetwork() {
@@ -260,7 +260,7 @@ class EthereumNode extends EventEmitter {
 
     /**
      * Start an baboqoo node.
-     * @param  {String} nodeType gbbq, eth, etc
+     * @param  {String} nodeType geth, eth, etc
      * @param  {String} network  network id
      * @return {Promise}
      */
@@ -318,9 +318,9 @@ class EthereumNode extends EventEmitter {
                 this.lastError = err.tag;
                 this.state = STATES.ERROR;
 
-                // if unable to start eth node then write gbbq to defaults
+                // if unable to start eth node then write geth to defaults
                 if (nodeType === 'eth') {
-                    Settings.saveUserData('node', 'gbbq');
+                    Settings.saveUserData('node', 'geth');
                 }
 
                 throw err;
@@ -365,7 +365,7 @@ class EthereumNode extends EventEmitter {
             syncMode = DEFAULT_SYNCMODE;
         }
         
-        if (nodeType === 'gbbq' && !syncMode) {
+        if (nodeType === 'geth' && !syncMode) {
             syncMode = DEFAULT_SYNCMODE;
         }        
 
@@ -421,7 +421,7 @@ class EthereumNode extends EventEmitter {
 
             // Starts Main net
             default:
-                args = (nodeType === 'gbbq')
+                args = (nodeType === 'geth')
                     ? [
                         '--syncmode', syncMode,
                         '--cache', ((process.arch === 'x64') ? '1024' : '512')
@@ -470,7 +470,7 @@ class EthereumNode extends EventEmitter {
                 /*
                     We wait a short while before marking startup as successful
                     because we may want to parse the initial node output for
-                    errors, etc (see gbbq port-binding error above)
+                    errors, etc (see geth port-binding error above)
                 */
                 setTimeout(() => {
                     if (STATES.STARTING === this.state) {
@@ -517,10 +517,10 @@ class EthereumNode extends EventEmitter {
             this.emit('nodeLog', cleanData);
         }
 
-        // check for gbbq startup errors
+        // check for geth startup errors
         if (STATES.STARTING === this.state) {
             const dataStr = data.toString().toLowerCase();
-            if (nodeType === 'gbbq') {
+            if (nodeType === 'geth') {
                 if (dataStr.indexOf('fatal: error') >= 0) {
                     const error = new Error(`Gbbq error: ${dataStr}`);
 

@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/BaboQoo/gbbq.ipc` on linux `~/.baboqoo/gbbq.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/BaboQoo/geth.ipc` on linux `~/.baboqoo/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ gbbq --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/BaboQoo/gbbq.ipc
+    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/BaboQoo/geth.ipc
 
 
 

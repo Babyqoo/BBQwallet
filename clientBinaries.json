@@ -11,7 +11,7 @@
                             "md5": "46a76e77fc9ae4dc9f8d1cf50f3b5798",
                             "bin": "geth-linux-amd64-1.8.2-b8b9f7f4/geth"
                         },
-                        "bin": "gbbq",
+                        "bin": "geth",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -31,7 +31,7 @@
                             "md5": "ac296bdc4eb4d2ba0d3e2c304ae457b5",
                             "bin": "geth-linux-386-1.8.2-b8b9f7f4/geth"
                         },
-                        "bin": "gbbq",
+                        "bin": "geth",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -53,7 +53,7 @@
                             "md5": "33e03f5df5798c3efb8aabd7c11fdd34",
                             "bin": "geth-darwin-amd64-1.8.2-b8b9f7f4/geth"
                         },
-                        "bin": "gbbq",
+                        "bin": "geth",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -75,7 +75,7 @@
                             "md5": "f498df54aaa42f4269c2d2d06df482fd",
                             "bin": "geth-windows-amd64-1.8.2-b8b9f7f4\\geth.exe"
                         },
-                        "bin": "gbbq.exe",
+                        "bin": "geth.exe",
                         "commands": {
                             "sanity": {
                                 "args": [
@@ -95,7 +95,7 @@
                             "md5": "4760b54e20de3ee50237ea8df896fb6f",
                             "bin": "geth-windows-386-1.8.2-b8b9f7f4\\geth.exe"
                         },
-                        "bin": "gbbq.exe",
+                        "bin": "geth.exe",
                         "commands": {
                             "sanity": {
                                 "args": [

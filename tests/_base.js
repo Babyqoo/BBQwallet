@@ -32,7 +32,7 @@ const startGeth = function* () {
 
     if (!manager.clients.Geth.state.available) {
         gethPath = manager.clients.Geth.activeCli.fullPath;
-        console.info('Downloading gbbq...');
+        console.info('Downloading geth...');
         const downloadedGeth = yield manager.download('Geth');
         gethPath = downloadedGeth.client.activeCli.fullPath;
         console.info('Geth downloaded at:', gethPath);
