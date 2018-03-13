@@ -1,7 +1,7 @@
 {
-  "name": "Mist-Interface",
+  "name": "BaboQooWallet-Interface",
   "version": "0.1.0",
-  "description": "Mist interface application",
+  "description": "BaboQooWallet interface application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
